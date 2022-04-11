@@ -1,0 +1,86 @@
+% Kapitel
+\chapter{Stile}
+
+\epigraph{\glqq The wise know their weakness too well to assume infallibility; and he who knows most, knows best how little he knows.\grqq\bigskip}%\textsc
+{{Thomas Jefferson}\\ (1743--1826)}
+
+\noindent
+Nachfolgend sind einige Beispiele zum Styling von Inhalten aufgeführt.
+Eine gute Einführung in das Arbeiten mit \LaTeX\ bietet die
+Ausarbeitung\footnote{\url{https://www.fernuni-hagen.de/imperia/md/content/zmi_2010/a026_latex_einf.pdf}, aufgerufen am 16.06.2017}
+von Jürgens und Feuerstack der FernUniversität in Hagen.
+
+\indent
+
+\section{Text}
+\label{text}
+Dies ist ein Beispiel für \textit{kursiven} und \textbf{fetten} Text.
+
+\bigskip
+
+Abkürzungen werden in der Datei \texttt{acronyms.tex} definiert und können dann vereinfacht genutzt werden. Alle tatsächlich eingesetzten
+Abkürzungen werden automatisch im Abkürzungsverzeichnis aufgeführt. Eine Abkürzung wird bei der ersten Verwendung zusätzlich ausgeschrieben
+dargestellt. Ein Beispiel: Das \ac{BSI} stellte fest \dots und weiterhin beobachtet das \ac{BSI} \dots
+
+\section{Abbildungen und Tabellen}
+
+Abbildung~\ref{fig:hsd_logo} zeigt eine einfache Abbildung.
+
+\begin{figure}[hbtp]
+  \centering
+  \includegraphics[width=.6\textwidth]{figures/hsd_m_logo.pdf}
+  \caption{Logo Hochschule Düsseldorf}
+  \label{fig:hsd_logo}
+\end{figure}
+
+\bigskip
+
+\noindent
+Tabelle~\ref{tab:beispieltabelle} zeigt eine einfache Tabelle.
+
+\begin{table}[hbtp]
+  \begin{center}
+    \begin{tabular}{|c|c|}
+      \hline 
+      \rule[-1ex]{0pt}{2.5ex} Eins & 1 \\ 
+      \hline 
+      \rule[-1ex]{0pt}{2.5ex} Zwei & 2 \\ 
+      \hline
+    \end{tabular}
+  \end{center}
+  \caption{Beispieltabelle}
+  \label{tab:beispieltabelle}
+\end{table}
+
+\section{Zitieren}
+
+Die benötigte Literatur wird in der Datei \texttt{literatur.bib} gepflegt. Das Literaturverzeichnis wird automatisch generiert.
+
+Dies ist ein Zitat von \citep*{Eckert2014} \dots laut \cite[Seite~42]{Eckert2014} ist dieses Vorgehen empfehlenswert.
+
+\noindent
+Der Zitierstil MUSS nach APA (American Psychological Asscociation)\footnote{\url{http://www.apastyle.org/}, abgerufen am 16.06.2017}
+Style erfolgen.
+
+\section{Listen}
+
+Unsortierte Liste:
+
+\begin{itemize}
+ \item Eins
+ \item Zwei
+ \item Drei
+\end{itemize}
+
+\bigskip
+
+\noindent
+Nummerierte Liste:
+
+\begin{enumerate}
+ \item Element
+ \item Element
+ \item Element
+\end{enumerate}
+
+\indent

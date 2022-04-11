@@ -1,0 +1,122 @@
+\documentclass[oneside,12pt,a4paper]{report}
+
+% [ Packages ]
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+% UTF8 für Umlaute
+\usepackage[utf8]{inputenc}
+
+% Formale Zitate
+\usepackage{csquotes}
+
+% Neue deutsche Rechtschreibung
+\usepackage[ngerman]{babel}
+
+% Zitate unter Überschriften darstellen
+\usepackage{epigraph}
+
+% Zeilenabstand
+\usepackage{setspace}
+
+% Akronyme
+\usepackage[
+  printonlyused
+]{acronym}
+
+% Kapitel / Überschriften und Seitenzahlen im Kopf anzeigen
+\usepackage{fancyhdr}
+
+% BibLaTeX mit Biber
+\usepackage[
+  style=apa
+  ,backend=biber
+  ,apabackref=true
+  ,language=auto
+  ,abbreviate=true
+  ,maxcitenames=2
+  ,natbib=true
+  ,hyperref=true
+  ,maxbibnames=99
+  ,url=true
+]{biblatex}
+
+% Sprache für APA zuweisen
+\DeclareLanguageMapping{ngerman}{ngerman-apa}
+
+% [ Bibliography ]
+\bibliography{bib/literatur}
+
+% [ Konfiguration ]
+\include{misc/config}
+
+% [ Benutzerangaben ]
+\include{misc/personal_ausarbeitung}
+
+\begin{document}
+
+  % Cover
+  \include{misc/cover_ausarbeitung}
+
+  % Seitenzahlen röm.
+  \pagenumbering{roman}
+
+  % Eidesstattliche Erklärung
+  \include{misc/eidesstattliche_erklaerung}
+
+  % Abstract
+  \include{content/abstract}
+
+  % Inhaltsverzeichnis
+
+  \pagestyle{plain}
+  \tableofcontents
+
+  % Abbildungsverzeichnis
+  \listoffigures
+
+  % Tabellenverzeichnis
+  \listoftables
+
+  % Abkürzungsverzeichnis
+  \newpage
+  \input{misc/acronyms}
+
+  \newpage
+
+  % Seitenzahlen arab.
+  \pagenumbering{arabic}
+  \pagestyle{fancy}
+  
+  \fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+
+  %Kopfzeile links
+  \fancyhead[RE]{\nouppercase\leftmark \\ \nouppercase\rightmark}
+
+  %Kopfzeile rechts
+  \fancyhead[LO]{\nouppercase\leftmark \\ \nouppercase\rightmark}
+
+  \fancyfoot[C]{\thepage}
+
+  % Kapitel 1 -- Einleitung
+  \include{content/kapitel_1_ausarbeitung}
+
+  % Kapitel 2 -- Stile
+  \include{content/kapitel_2}
+
+  % Kapitel 3 -- Tooling
+  \include{content/kapitel_3}
+  
+    % Kapitel 4 -- Infrastruktur
+  \include{content/kapitel_4}
+  
+  \appendix
+
+  % Anhang A
+  \include{content/anhang_a}
+
+    % Literaturverzeichnis
+  \printbibliography
+
+\end{document}

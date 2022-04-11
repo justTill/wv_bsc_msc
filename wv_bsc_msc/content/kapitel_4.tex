@@ -1,0 +1,42 @@
+% Kapitel
+\chapter{Infrastruktur}
+\label{chap:infrastruktur}
+
+\epigraph{\glqq The secret of all victory lies in the organization of the non-obvious.\grqq\bigskip}%\textsc
+{{Marcus Aurelius}\\ (121--180)}
+
+\noindent
+Die Erstellung einer Arbeit sollte in einer bereitgestellten Infrastruktur erfolgen, die insbesondere bei der Planung und Verwaltung einer Arbeit unterstützt.
+\indent
+
+\section{GitLab-Server}
+\label{gitlab}
+
+Unterschiedliche Dienste, die im Kontext einer Arbeit von Nutzen sind, werden über einen GitLab-Server bereitgestellt. Jeder Kandidat erhält einen
+persönlichen Zugang und ein eigenes Repository. In diesem Repository werden Dokumente und eigene Inhalte der Arbeit zentral verwaltet und somit dem
+Betreuer zur Kontrolle übergeben. Der GitLab-Server stellt hierzu in erster Linie ein Repository bereit. Das Repository bzw. eine Versionsverwaltung
+im Allgemeinen hilft vor allem bei der Verwaltung von textbasierten Dateien, so z.\,B. Quellcode oder Dokumente in \LaTeX .\\
+
+Zur Planung einer Arbeit und Kontrolle des Fortschritts erfolgt das Projektmanagement digital innerhalb von GitLab. Hierzu werden Milestones und Issues
+angelegt und während des Projektes gepflegt bzw. Fortschritte kontrolliert. Eine möglichst präzise Projektplanung hilft bei der Vermeidung von etwaigen
+zeitlichen Engpässen im Laufe der Erstellung einer Arbeit.
+
+\section{Versionsverwaltung mit Git}
+
+Die Verwaltung der Arbeit, die mittels \LaTeX\ verfasst wird, und aller zugehörigen Dateien bzw. Dokumente kann auf einfache und sehr transparente
+Weise mittels einer Versionsverwaltung erfolgen. Als Versionsverwaltung wird Git\footnote{\url{https://git-scm.com/}, aufgerufen am 16.06.2017} eingesetzt.
+Git steht für alle gängigen Betriebssysteme bereit.\\
+
+Jegliche Änderungen und Ergänzungen werden von Git erkannt und aufgezeichnet. Erfolgte Änderungen sollten mittels sog. \glqq Commits\grqq\ eingepflegt und beschrieben werden.
+Die Versionsverwaltung erfolgt in erster Linie auf dem lokalen System. Erfolgte Änderungen bzw. Fortschritte sollten -- nicht nur als Backup -- regelmäßig über den
+bereitgestellten GitLab-Server dem Betreuer zur Verfügung gestellt werden.
+
+Die Arbeit mit Git kann sowohl auf der Kommandozeile als auch in Applikation mit UI erfolgen. Die Applikation
+\glqq SourceTree\grqq\footnote{\url{https://www.sourcetreeapp.com/}, aufgerufen am 16.06.2017} ermöglicht beispielsweise
+die komfortable Verwaltung von Git-Repositories.
+
+Grundsätzliche Tipps zum Umgang mit Git liefern die offizielle Dokumentation\footnote{\url{https://git-scm.com/doc}, aufgerufen am 16.06.2017}
+und das \glqq Git Cheat Sheet\grqq\footnote{\url{https://www.git-tower.com/blog/git-cheat-sheet/}, aufgerufen am 16.06.2017}.
+
+Gerade im Zusammenhang mit \LaTeX entstehen viele temporäre Dateien, die nicht in der Versionsverwaltung landen sollten.
+Dazu sollte eine \texttt{gitignore} Konfiguration\footnote{\url{https://www.gitignore.io/}, aufgerufen am 04.07.2017} erstellt werden.
